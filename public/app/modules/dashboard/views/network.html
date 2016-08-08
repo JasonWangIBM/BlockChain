@@ -1,0 +1,44 @@
+<!--
+Author: Wang Zulong
+Page Description: Dashboard Home page
+Date: 05 Jan 2016
+-->
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Network
+    </h1>
+    <ol class="breadcrumb">
+        <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">Network</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <canvas id="canvas" width="1180px" height="350px" style="border: 1px solid rgb(68, 68, 68); cursor: default; background-color: rgb(238, 238, 238)">
+
+    </canvas>
+    <!-- Info boxes -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Peer</th>
+            <th>Routes</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="active">
+            <td>Member Service</td>
+            <td>172.17.0.1:50051</td>
+            <td style="color:green">Running</td>
+        </tr>
+        <tr class="active"data-ng-repeat="peer in peersData.peers">
+            <td>{{peer.ID.name}}</td>
+            <td>{{peer.address}}</td>
+            <td style="color:green">Running</td>
+        </tr>
+        </tbody>
+    </table>
+</section><!-- /.content -->

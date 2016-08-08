@@ -1,0 +1,29 @@
+<!--
+Author: Wang Zulong
+Page Description: Dashboard Home page
+Date: 05 Jan 2016
+-->
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Live Logs
+    </h1>
+    <ol class="breadcrumb">
+        <li><a><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li class="active">liveLogs</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" >
+            <li role="presentation" ng-class="{true: 'active', false: ''}[peerName.selectedFlag]" ng-click="selectPeer(peerName)" data-ng-repeat="peerName in peerNames"><a href="#" aria-controls="{{peerName.value}} role="tab" data-toggle="tab" style="font-size:19px;">{{peerName.value}}</a></li>
+        </ul>
+
+    </div>
+    <div class="logText" id="logText">
+        <div></div>
+    </div>
+</section><!-- /.content -->

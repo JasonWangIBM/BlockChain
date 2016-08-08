@@ -1,38 +1,14 @@
-# Angular Bootstrap Dashboard
-Angular Bootstrap Dashboard is a web dashboard application based on Bootstrap and AngularJS. 
-All components included in this dashboard template has been developed to bring all the potential of HTML5 and Bootstrap plus a set of new features (JS and CSS) ideal for your next dashboard admin theme or admin web app project. 
-Angular Bootstrap Dashboard can be used in any type of web applications dashboard. 
-Angular Bootstrap Dashboard uses ui-router for routing purposes.
+# Node.js Starter Overview
 
-## Get The Dashboard
+The Node.js Starter demonstrates a simple, reusable Node.js web application based on the Express framework.
 
-* [Demo] (http://dashboard.ranjithprabhu.in)
+## Run the app locally
 
-* [Download Source]  (https://github.com/ranjithprabhuk/Angular-Bootstrap-Dashboard/archive/master.zip)
+1. [Install Node.js][]
+2. Download and extract the starter code from the Bluemix UI
+3. cd into the app directory
+4. Run `npm install` to install the app's dependencies
+5. Run `npm start` to start the app
+6. Access the running app in a browser at http://localhost:6001
 
-* Username: admin
-
-* Password: admin
-
-## Features
-* Multiple Themes
-* Multiple Layouts
-* Works in All Modern Browsers
-
-## Plugins used
-* jQuery
-* jQuery Knob
-* Chart.js
-* Owl Carousel
-
-## Usage
-* Download and customize the application as per your requirements.
-
-## About Author
-* [Author URL] (http://ranjithprabhu.in)
-
-I am passionate in playing with pixels, creating attractive designs which interact well with the user and love developing web apps. Have a good background in web design and development. Also having wonderful working experience with various interesting projects and participated in the development of the products to provide end to end solutions.
-
-
-## License
-Released under the MIT license.
+[Install Node.js]: https://nodejs.org/en/download/
