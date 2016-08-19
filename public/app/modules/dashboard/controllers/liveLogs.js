@@ -35,7 +35,7 @@ dashboard.controller("LiveLogsController", ['$rootScope', '$scope', '$state', '$
                 peerName.selectedFlag=false;
             })
             obj.selectedFlag = !obj.selectedFlag
-            var wslink = appSettings.websocket+ obj.value;
+            var wslink = appSettings.logapiBase+ obj.value;
 
             $http({
                 method : 'GET',
@@ -57,7 +57,7 @@ dashboard.controller("LiveLogsController", ['$rootScope', '$scope', '$state', '$
         $scope.getPeersData();
 
         $timeout(function(){
-            var wslink = appSettings.websocket+ 'ca';
+            var wslink = appSettings.logapiBase+ 'ca';
             $http({
                 method : 'GET',
                 url : wslink

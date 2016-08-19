@@ -44,12 +44,17 @@ app.use(express.static(__dirname + '/public'));
 app.use(log4js.connectLogger(logger, {level:log4js.levels.INFO}));
 
 app.get('/log/:id', function(req, res) {
-  var input  = fs.createReadStream('/usr/local/go/src/github.com/hyperledger/fabric/logs/' + req.params.id + '.log', {encoding: 'utf8'});
+  var logsPath = '/usr/local/go/src/github.com/hyperledger/fabric/logs/';
+  var logfileSize = fs.statSync(logsPath + req.params.id + '.log').size;
+
+  var input = fs.createReadStream(logsPath + req.params.id + '.log', {encoding: 'utf8', start:logfileSize-10000, end:logfileSize});
+
   input.on('data', function (chunk) {
-    res.end(chunk);
+    res.write(chunk);
   });
 
   input.on('end', function () {
+    res.end("");
     logger.info('log file ' + req.params.id + '.log is visited.');
   });
 

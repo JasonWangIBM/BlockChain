@@ -40,17 +40,17 @@ dashboard.controller("NetworkController", ['$rootScope', '$scope', '$state', '$l
 
                             Node.fillColor = '0, 0, 255';
                             // Node.setLocation(450 + j*140, 100 + i* 140);
-                            // if (i==0) {
-                            //     Node.setLocation(350, 80);
-                            // } else if (i==1) {
-                            //     Node.setLocation(750, 80);
-                            // } else if (i==2) {
-                            //     Node.setLocation(450, 240);
-                            // } else if (i==3) {
-                            //     Node.setLocation(650, 240);
-                            // }
+                             if (i==0) {
+                                 Node.setLocation(250, 30);
+                             } else if (i==1) {
+                                 Node.setLocation(850, 30);
+                             } else if (i==2) {
+                                 Node.setLocation(200, 300);
+                             } else if (i==3) {
+                                 Node.setLocation(900, 300);
+                             }
 
-                            Node.setLocation(Math.sin((ahd*i))*radius + 550, Math.cos((ahd*i))*radius + 130);
+                            //Node.setLocation(Math.sin((ahd*i))*radius + 550, Math.cos((ahd*i))*radius + 130);
                             Node.setImage('img/host.png', true);
                             Node.textPosition = 'Bottom_Center';
                             scene.add(Node);
@@ -59,7 +59,7 @@ dashboard.controller("NetworkController", ['$rootScope', '$scope', '$state', '$l
 
                     var MemberServiceNode = new JTopo.Node('Member Service');
                     MemberServiceNode.fillColor = '0, 0, 255';
-                    MemberServiceNode.setLocation(550, 130);
+                    MemberServiceNode.setLocation(550, 230);
                     MemberServiceNode.setImage('img/host.png', true);
                     MemberServiceNode.textPosition = 'Bottom_Center';
                     scene.add(MemberServiceNode);

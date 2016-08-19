@@ -58,7 +58,7 @@ dashboard.controller("BlockchainController", ['$rootScope', '$scope', '$state', 
                     }
                     $scope.blocks.push(block);
                 }
-                for (var i = 0; i < defaultCount || i < $scope.blocks.length; i++) {
+                for (var i = 0; i < defaultCount && i < $scope.blocks.length; i++) {
                     $scope.showblocks.push($scope.blocks[i])
                 }
 
